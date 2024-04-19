@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Fri Apr 19 19:22:44 2024
-
 @author: klara
 """
 import numpy as np
@@ -17,7 +15,7 @@ def VarmelikningenNumerisk(nx, ny, nt, dx, dy, alpha, dt):
     # sette initialbetingelser 
     u[nx//2, ny//2] = 1  # Plasser en varmepuls midt i området
 
-    # Implementre løkke for å løse varmelikningen
+    # Implementere løkke for å løse varmelikningen
     for n in range(nt):
         un = u.copy()  # Kopierer temperaturfeltet fra forrige tidstrinn
 
@@ -44,7 +42,6 @@ dy = 0.1  # Steglengde i y-retning
 alpha = 0.1# Termisk diffusivitet alpha
 dt = 0.01  # Tidssteg
 
-
 # Plotting 
 x = np.linspace(0, nx-1, nx)
 y = np.linspace(0, ny-1, ny)
@@ -57,3 +54,4 @@ plt.title('Varmepuls i to romlige dimensjoner')
 plt.xlabel('X-akse')
 plt.ylabel('Y-akse')
 plt.show()
+
